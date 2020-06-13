@@ -13,12 +13,8 @@ queries = [
     'сериалы про спорт',
 ]
 
-sum_lists = []
-
 for inquiry in queries:
-    inquiry = len(inquiry.split())
-    sum_lists.append(inquiry)
+    sum_lists = [len(inquiry.split()) for inquiry in queries]
 
-word_dict = dict(Counter(sum_lists))
-for word, count_word in word_dict.items():
+for word, count_word in Counter(sum_lists).items():
     print(f'Поисковых запросов из {word} слов - {round((count_word * 100) / len(queries))} %')
