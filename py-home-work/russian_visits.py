@@ -13,7 +13,9 @@ geo_logs = [
     {'visit10': ['Архангельск', 'Россия']}
 ]
 
+russian_visits = []
 for visits in geo_logs:
-    for russian_visits in visits.values():
-        if russian_visits[1] == 'Россия':
-            print(visits)
+    for russian_visits_1 in visits.values():
+        if russian_visits_1[1] == 'Россия':
+            russian_visits.append(visits)
+print(russian_visits)
