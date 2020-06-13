@@ -16,12 +16,9 @@ queries = [
 sum_lists = []
 
 for inquiry in queries:
-    inquiry = list(''.join(inquiry).split())
-    inquiry = len(inquiry)
+    inquiry = len(inquiry.split())
     sum_lists.append(inquiry)
 
 word_dict = dict(Counter(sum_lists))
 for word, count_word in word_dict.items():
     print(f'Поисковых запросов из {word} слов - {round((count_word * 100) / len(queries))} %')
-
-
