@@ -16,4 +16,4 @@ def get_top_ten_word_for_json(file_path):
         print(num + 1, json_unit[0], '\n')
 
 
-get_top_ten_word_for_json('files/newsafr.json')
+get_top_ten_word_for_json('../files/newsafr.json')

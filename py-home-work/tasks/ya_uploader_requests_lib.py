@@ -42,5 +42,5 @@ class YaUploader:
 
 
 if __name__ == '__main__':
-    uploader = YaUploader('files')
+    uploader = YaUploader('../files')
     result = uploader.upload()

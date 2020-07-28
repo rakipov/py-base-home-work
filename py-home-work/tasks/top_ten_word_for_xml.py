@@ -17,4 +17,4 @@ def get_top_ten_word(file_path):
         print(num + 1, xml_unit[0], '\n')
 
 
-get_top_ten_word('files/newsafr.xml')
+get_top_ten_word('../files/newsafr.xml')

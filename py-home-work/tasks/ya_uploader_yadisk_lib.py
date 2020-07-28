@@ -7,12 +7,12 @@ class YaUploader:
         self.file_path = file_path
 
     def _get_files_from_folder(self) -> list:
-        """Метод получает списк файлов из каталога по пути self.file_path и возвращает список файлов для дальнейшей работы"""
+        """Метод получает список файлов из каталога по пути self.file_path и возвращает список файлов для дальнейшей работы"""
         file_list = os.listdir(self.file_path)
         return file_list
 
     def upload(self):
-        """Метод загруджает файлы по списку file_list на яндекс диск"""
+        """Метод загружает файлы по списку file_list на яндекс диск"""
         file_list = self._get_files_from_folder()
         file_path = self.file_path
         y = yadisk.YaDisk(token="")
@@ -22,12 +22,12 @@ class YaUploader:
         return
 
     def create_folder(self):
-        """метод создает папку на яндекс.диске с таким же именем как и в self.file_path"""
+        """Метод создает папку на яндекс.диске с таким же именем как и в self.file_path"""
         file_path = self.file_path
         y = yadisk.YaDisk(token="")
         y.mkdir(file_path)
 
 
 if __name__ == '__main__':
-    uploader = YaUploader('files')
+    uploader = YaUploader('../files')
     result = uploader.upload()

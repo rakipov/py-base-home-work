@@ -6,7 +6,7 @@
 #     {'ingredient_name': 'Помидор', 'quantity': 2, 'measure': 'шт'}
 #     ]
 
-with open("files/recipes.txt", "r") as recipes_file:
+with open("../files/recipes.txt", "r") as recipes_file:
     cook_book = {}
     for line in recipes_file:
         dish = line.rstrip()
